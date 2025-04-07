@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Doações</title>
+    <link rel="stylesheet" href="../frontend/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #ff0000;">Gestão de Doações e Moradores</h1>
+
+       
+        <div class="form-section">
+            <h2 style="color: #ff3333;">Cadastrar/Editar Morador</h2>
+            <form id="moradorForm">
+                <input type="text" id="moradorName" placeholder="Nome" required>
+                <input type="text" id="moradorApelido" placeholder="Apelido">
+                <input type="text" id="moradorContato" placeholder="Contato">
+                <input type="text" id="moradorRua" placeholder="Rua">
+                <input type="number" id="moradorNumero" placeholder="Número">
+                <input type="text" id="moradorComplemento" placeholder="Complemento">
+                <input type="text" id="moradorBairro" placeholder="Bairro">
+                <input type="hidden" id="moradorId">
+                <button type="submit" style="background-color: #ff6666;">Salvar Morador</button>
+            </form>
+        </div>
+
+        
+        <div class="list-section">
+            <h2 style="color: #ff3333;">Moradores</h2>
+            <ul id="moradoresList"></ul>
+        </div>
+
+        
+        <div class="form-section">
+            <h2 style="color: #ff3333;">Cadastrar/Editar Doação</h2>
+            <form id="doacaoForm">
+                <select id="doacaoTipo" required>
+                    <option value="oleo">Óleo</option>
+                    <option value="organico">Orgânico</option>
+                    <option value="plastico">Plástico</option>
+                </select>
+                <input type="number" id="doacaoQuantidade" placeholder="Quantidade" required>
+                <input type="text" id="doacaoLocal" placeholder="Local" required>
+                <select id="doacaoMorador" required></select>
+                <input type="hidden" id="doacaoId">
+                <button type="submit" style="background-color: #ff6666;">Salvar Doação</button>
+            </form>
+        </div>
+
+        
+        <div class="list-section">
+            <h2 style="color: #ff3333;">Doações</h2>
+            <ul id="doacoesList"></ul>
+        </div>
+    </div>
+
+    <script src="../frontend/js/script.js"></script>
+</body>
+</html>
